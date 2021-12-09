@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
 
 function Section({
   id,
@@ -11,25 +10,26 @@ function Section({
   leftBtnText,
   rightBtnText,
 }) {
-  console.log(id);
   return (
-    <Wrap bgImage={backgroundImg} id={id}>
-      <Fade bottom>
-        <ItemText>
-          <h1 id={id}>{title}</h1>
-          <p>{description}</p>
-        </ItemText>
-      </Fade>
-      <Buttons>
+    <div id={id}>
+      <Wrap bgImage={backgroundImg}>
         <Fade bottom>
-          <ButtonGroup>
-            <LeftButton>{leftBtnText}</LeftButton>
-            {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
-          </ButtonGroup>
+          <ItemText>
+            <h1 id={id}>{title}</h1>
+            <p>{description}</p>
+          </ItemText>
         </Fade>
-        <DownArrow src="/assets/down-arrow.svg" />
-      </Buttons>
-    </Wrap>
+        <Buttons>
+          <Fade bottom>
+            <ButtonGroup>
+              <LeftButton>{leftBtnText}</LeftButton>
+              {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
+            </ButtonGroup>
+          </Fade>
+          <DownArrow src="/assets/down-arrow.svg" />
+        </Buttons>
+      </Wrap>
+    </div>
   );
 }
 

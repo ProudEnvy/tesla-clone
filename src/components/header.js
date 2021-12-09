@@ -16,7 +16,12 @@ function Header() {
         <img src="/assets/logo.svg" alt="" />
       </a>
       <Menu>
-        {cars && cars.map((car, index) => <a key={index} href="#">{car}</a>)}
+        {cars &&
+          cars.map((car, index) => (
+            <a key={index} href={"#" + car} className="page-scroll">
+              {car}
+            </a>
+          ))}
       </Menu>
       <RightMenu>
         <a href="#">Shop</a>
