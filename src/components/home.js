@@ -6,6 +6,7 @@ function home() {
     return (
       <Container>
         <Section
+          id="ModelS"
           title="Model S"
           description="Order online for Touchless Delivery"
           backgroundImg="/assets/model-s.jpg"
@@ -13,6 +14,7 @@ function home() {
           rightBtnText="inventory"
         />
         <Section
+          id="ModelX"
           title="Model x"
           description="Order online for Touchless Delivery"
           backgroundImg="/assets/model-x.jpg"
