@@ -12,7 +12,7 @@ function Header() {
 
   return (
     <Container>
-      <a href="">
+      <a href="#">
         <img src="/assets/logo.svg" alt="" />
       </a>
       <Menu>
