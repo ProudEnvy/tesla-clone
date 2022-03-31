@@ -4,12 +4,18 @@ import Fade from "react-reveal/Fade";
 
 function Section({
   id,
+  number,
   title,
   description,
   backgroundImg,
   leftBtnText,
   rightBtnText,
 }) {
+
+  var list = ["#ModelS", "#ModelX", "#ModelY", "#Model3"];
+  var nextLink = list[(number + 1) % 4];
+  
+
   return (
     <div id={id}>
       <Wrap bgImage={backgroundImg}>
@@ -26,7 +32,12 @@ function Section({
               {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
             </ButtonGroup>
           </Fade>
-          <DownArrow src="/assets/down-arrow.svg" />
+          <a href={nextLink}>
+            <DownArrow
+              src="/assets/down-arrow.svg"
+              onClick={() => console.log(nextLink)}
+            />
+          </a>
         </Buttons>
       </Wrap>
     </div>
@@ -89,5 +100,6 @@ const DownArrow = styled.img`
     height: 40px;
     overflow-x: hidden;
     animation: animateDown infinite 1.5s;
+    cursor: pointer;
 `
 const Buttons = styled.div``

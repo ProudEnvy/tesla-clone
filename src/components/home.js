@@ -10,6 +10,7 @@ function Home() {
       <Container>
         <Section
           id={cars[0]}
+          number={0}
           title={cars[0]}
           description="Order online for Touchless Delivery"
           backgroundImg="/assets/model-s.jpg"
@@ -18,6 +19,7 @@ function Home() {
         />
         <Section
           id={cars[1]}
+          number={1}
           title={cars[1]}
           description="Order online for Touchless Delivery"
           backgroundImg="/assets/model-x.jpg"
@@ -26,6 +28,7 @@ function Home() {
         />
         <Section
           id={cars[2]}
+          number={2}
           title={cars[2]}
           description="Order online for Touchless Delivery"
           backgroundImg="/assets/model-y.jpg"
@@ -34,6 +37,7 @@ function Home() {
         />
         <Section
           id={cars[3]}
+          number={3}
           title={cars[3]}
           description="Order online for Touchless Delivery"
           backgroundImg="/assets/model-3.jpg"
